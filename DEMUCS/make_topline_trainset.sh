@@ -1,0 +1,19 @@
+#!/bin/bash
+# Copyright (c) Facebook, Inc. and its affiliates.
+# All rights reserved.
+#
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+# authors: adiyoss and adefossez
+
+export CUDA_VISIBLE_DEVICES=0
+
+path_tr=egs/hat-esc_topline/tr
+if [[ ! -e $path_tr ]]; then
+    mkdir -p $path_tr
+fi
+noisy_train=/share/nas169/jethrowang/URSA-GAN/data/HAT-ESC/train_webcam+target_noise
+clean_train=/share/nas169/jethrowang/URSA-GAN/data/HAT/train/condenser
+
+python -m denoiser.audio $noisy_train > $path_tr/noisy.json
+python -m denoiser.audio $clean_train > $path_tr/clean.json
