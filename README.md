@@ -1,1 +1,1 @@
-# [Submitted to TASLP] Universal Robust Speech Adaptation for Cross-domain Speech Recognition and Enhancement
+# [Submitted to TASLP] Universal Robust Speech Adaptation for Cross-Domain Speech Recognition and Enhancement
